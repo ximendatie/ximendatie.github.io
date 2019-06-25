@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ximendatie.github.io/</id>
     <title>Harvey</title>
-    <updated>2019-06-12T12:25:57.625Z</updated>
+    <updated>2019-06-25T03:54:10.096Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ximendatie.github.io/"/>
     <link rel="self" href="https://ximendatie.github.io//atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://ximendatie.github.io//images/avatar.png</logo>
     <icon>https://ximendatie.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Harvey</rights>
+    <entry>
+        <title type="html"><![CDATA[PWA是什么]]></title>
+        <id>https://ximendatie.github.io//post/pwa-shi-shi-me</id>
+        <link href="https://ximendatie.github.io//post/pwa-shi-shi-me">
+        </link>
+        <updated>2019-06-18T09:25:37.000Z</updated>
+        <content type="html"><![CDATA[<p>引用自 Harttle.Land 的说法：</p>
+<blockquote>
+<p>PWA（Progressive Web Apps）是 Google 最近在提的一种 Web App 形态 （或者如 Wikipedia 所称的「软件开发方法」）。 Harttle 能找到的关于 PWA 最早的一篇文章是 2015年6月 Alex Russell 的一篇博客： Progressive apps escaping tabs without losing our soul， 让 Web App 从标签页跳出来，同时保持 Web 的灵魂。</p>
+</blockquote>
+<p>PWA终究还是运行在浏览器内，只是形式类app，所以能不能运行还是看当前浏览器的支持</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[test]]></title>
         <id>https://ximendatie.github.io//post/test</id>
