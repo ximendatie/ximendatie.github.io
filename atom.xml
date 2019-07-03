@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ximendatie.github.io/</id>
     <title>Harvey</title>
-    <updated>2019-07-02T13:46:16.607Z</updated>
+    <updated>2019-07-03T09:40:05.466Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ximendatie.github.io/"/>
     <link rel="self" href="https://ximendatie.github.io//atom.xml"/>
@@ -10,6 +10,36 @@
     <logo>https://ximendatie.github.io//images/avatar.png</logo>
     <icon>https://ximendatie.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Harvey</rights>
+    <entry>
+        <title type="html"><![CDATA[常用指令]]></title>
+        <id>https://ximendatie.github.io//post/chang-yong-zhi-ling</id>
+        <link href="https://ximendatie.github.io//post/chang-yong-zhi-ling">
+        </link>
+        <updated>2019-07-03T03:39:24.000Z</updated>
+        <summary type="html"><![CDATA[<p>git等常用指令</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>git等常用指令</p>
+<!-- more -->
+<p>新建分支并切换到该分支
+git checkout -b test</p>
+<p>删除本地分支
+git branch -d dev</p>
+<p>删除远程分支
+git branch -r -d origin/branch_dev
+or
+git push origin :branch_dev</p>
+<p>本地新分支同步到远程
+git push origin branch_dev:branch_dev
+冒号前是本地分支的名，冒号后面是要创建的远程分支名，自己另起名称随便，如果直接使用 git push origin branch_dev 则默认和远程分支同名</p>
+<p>远程新分支拉到本地
+1.git checkout -b test origin/test
+如果失败，尝试先git fetch后执行
+采用此种方法建立的本地分支会和远程分支建立映射关系
+2.git fetch origin test:test
+使用该方式会在本地新建分支，但是不会自动切换到该本地分支，需要手动checkout。
+采用此种方法建立的本地分支不会和远程分支建立映射关系。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[博客开发]]></title>
         <id>https://ximendatie.github.io//post/bo-ke-kai-fa</id>
