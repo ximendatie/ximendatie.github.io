@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ximendatie.github.io/</id>
     <title>Harvey</title>
-    <updated>2019-07-03T09:40:05.466Z</updated>
+    <updated>2019-07-03T09:44:32.117Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ximendatie.github.io/"/>
     <link rel="self" href="https://ximendatie.github.io//atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://ximendatie.github.io//images/avatar.png</logo>
     <icon>https://ximendatie.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Harvey</rights>
+    <entry>
+        <title type="html"><![CDATA[应用]]></title>
+        <id>https://ximendatie.github.io//post/ni-you-shi-me-la-ji</id>
+        <link href="https://ximendatie.github.io//post/ni-you-shi-me-la-ji">
+        </link>
+        <updated>2019-07-03T09:41:46.000Z</updated>
+        <summary type="html"><![CDATA[<p>技术积累</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>技术积累</p>
+<!-- more -->
+<p>商用图像识别api
+https://cloud.baidu.com/doc/IMAGERECOGNITION/index.html
+https://open.youtu.qq.com/#/open/developer/summary
+https://help.aliyun.com/knowledge_detail/53540.html?spm=a2c4g.11186631.6.550.6c63534cy4o8iU</p>
+<p>imagenet</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[常用指令]]></title>
         <id>https://ximendatie.github.io//post/chang-yong-zhi-ling</id>
