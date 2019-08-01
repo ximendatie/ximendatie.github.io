@@ -3,16 +3,22 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Gridea | Harvey</title>
+<title>linux指令 | Harvey</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://ximendatie.github.io//favicon.ico?v=1562147059575">
+<link rel="shortcut icon" href="https://ximendatie.github.io//favicon.ico?v=1564650763561">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://ximendatie.github.io//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -39,7 +45,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://ximendatie.github.io/">
-        <img src="https://ximendatie.github.io//images/avatar.png?v=1562147059575" class="site-logo">
+        <img src="https://ximendatie.github.io//images/avatar.png?v=1564650763561" class="site-logo">
         <h1 class="site-title">Harvey</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -104,35 +110,36 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: Gridea</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://ximendatie.github.io//post/hello-gridea">
-                  <h2 class="post-title">Hello Gridea</h2>
-                </a>
-                <div class="post-date">
-                  2018-12-12
-                </div>
-                <div class="post-abstract">
-                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+          <div class="post-detail">
+            <h2 class="post-title">linux指令</h2>
+            <div class="post-date">2019-07-29</div>
+            
+            <div class="post-content">
+              <p>常用指令</p>
+<!-- more -->
+<p>zcvf :   打包压缩<br>
+例如:  (tar   -zcvf    xxx.tar.gz    aaa.txt   bbb.txt   ccc.txt)   把aaa.txt   bbb.txt   ccc.txt打包压缩为一个名叫xxx.tar.gz 压缩包
+z:代表的是压缩
+c:代表的是打包
+x:代表的是解压
+v:代表的是过程
+f:代表的是指定文件名</p>
+<p>xvf: 解压缩
+例如(tar  -xvf   xxx.tar.gz    -C/usr)   -C代表解压的位置  把xxx.tar.gz解压缩到根目录下的usr目录</p>
 
-                </div>
-              </div>
-              
-                <a class="right" href="https://ximendatie.github.io//post/hello-gridea">
-                  <div class="feature-container" style="background-image: url('https://ximendatie.github.io//post-images/hello-gridea.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            </div>
+            
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -154,6 +161,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '16498e1ade0bc94d15df',
+        clientSecret: '7e744a2e6dbcbe25c828b670989b34fa3bdbaaea',
+        repo: 'ximendatie.github.io',
+        owner: 'ximendatie',
+        admin: ['ximendatie'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 

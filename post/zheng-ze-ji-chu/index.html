@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>git 指令 | Harvey</title>
+<title>正则基础 | Harvey</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -111,38 +111,11 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">git 指令</h2>
-            <div class="post-date">2019-07-03</div>
+            <h2 class="post-title">正则基础</h2>
+            <div class="post-date">2019-07-08</div>
             
             <div class="post-content">
-              <p>git等常用指令</p>
-<!-- more -->
-<p>新建分支并切换到该分支
-git checkout -b test</p>
-<p>删除本地分支
-git branch -d dev</p>
-<p>删除远程分支
-git branch -r -d origin/branch_dev
-and
-git push origin :branch_dev</p>
-<p>本地新分支同步到远程
-git push origin branch_dev:branch_dev
-冒号前是本地分支的名，冒号后面是要创建的远程分支名，自己另起名称随便，如果直接使用 git push origin branch_dev 则默认和远程分支同名</p>
-<p>远程新分支拉到本地
-1.git checkout -b test origin/test
-如果失败，尝试先git fetch后执行
-采用此种方法建立的本地分支会和远程分支建立映射关系
-2.git fetch origin test:test
-使用该方式会在本地新建分支，但是不会自动切换到该本地分支，需要手动checkout。
-采用此种方法建立的本地分支不会和远程分支建立映射关系。</p>
-<p>head指向控制
-git checkout test 或
-git checkout ea9a77f 切到某一次提交</p>
-<p>仅合并部分文件
-https://segmentfault.com/a/1190000008360855</p>
-<p>github使用的pull request和gitlab使用的merge request，意义相同</p>
-<p>回滚
-git reset直接回到某一commit适用于本地回滚；git revert撤销某一commit，但是版本会向前走，可以用于远程回滚。前者指定id会定位到某个id，后者指定id会把某个id的提交撤销</p>
+              <p>常见规则</p>
 
             </div>
             
