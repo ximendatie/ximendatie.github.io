@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ximendatie.github.io/</id>
     <title>Harvey</title>
-    <updated>2019-08-01T10:33:34.865Z</updated>
+    <updated>2019-08-02T08:05:33.079Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ximendatie.github.io/"/>
     <link rel="self" href="https://ximendatie.github.io//atom.xml"/>
@@ -10,6 +10,80 @@
     <logo>https://ximendatie.github.io//images/avatar.png</logo>
     <icon>https://ximendatie.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Harvey</rights>
+    <entry>
+        <title type="html"><![CDATA[JS数字陷阱]]></title>
+        <id>https://ximendatie.github.io//post/js-shu-zi-xian-jing</id>
+        <link href="https://ximendatie.github.io//post/js-shu-zi-xian-jing">
+        </link>
+        <updated>2019-08-02T06:48:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>安全整形数字范围，浮点数陷阱</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>安全整形数字范围，浮点数陷阱</p>
+<!-- more -->
+<h3 id="js安全整数">js安全整数</h3>
+<p>js 中能够安全使用的有符号 安全 大整数（注意这里是指能够安全使用，进行算数运算的范围），并不像其他语言在 64 位环境中那样是:</p>
+<pre><code>2^63 - 1;//9223372036854775807
+</code></pre>
+<p>js中[-2^53, +2^53] 这个范围是称为 safe integers，超出这个范围的数字，就是 unsafe integers，</p>
+<pre><code>Number.MAX_SAFE_INTEGER // 9007199254740991 (Math.pow(2,53)-1)
+Number.MIN_SAFE_INTEGER // -9007199254740991
+</code></pre>
+<p>超出这个范围会无法正确使用，例如</p>
+<pre><code>console.log(123456789123456789) //123456789123456780
+</code></pre>
+<p>也就是想安全使用整数，需要保证位数在16位内<br>
+可以通过转化成字符串或者第三方库等方式解决大整数问题bignum、bigint</p>
+<h3 id="浮点数陷阱">浮点数陷阱</h3>
+<p>在js中，有个奇怪现象</p>
+<pre><code>0.1+0.2=0.30000000000000004
+</code></pre>
+<p>这是因为0.1在机器中以二进制存储是0.0001100110011001100(1100循环)也就是0.100000000000000005551115123126，因此产生了浮点误差，相应的0.2也有类似情况，小数不像整数那样都能被二进制直接有限的映射出来。<br>
+这时候0.1+0.2在机器计算是就变成了</p>
+<pre><code>0.00011001100110011001100110011001100110011001100110011010 +
+0.0011001100110011001100110011001100110011001100110011010 =
+0.0100110011001100110011001100110011001100110011001100111
+// 转成十进制正好是 0.30000000000000004
+</code></pre>
+<p>尽量避免小数运算，可以整体变成整形后处理</p>
+<h3 id="十进制转二进制方法">十进制转二进制方法</h3>
+<ol>
+<li>十进制整数转换为二进制整数<br>
+十进制整数转换为二进制整数采用&quot;除2取余，逆序排列&quot;法。具体做法是：用2去除十进制整数，可以得到一个商和余数；再用2去除商，又会得到一个商和余数，如此进行，直到商为零时为止，然后把先得到的余数作为二进制数的低位有效位，后得到的余数作为二进制数的高位有效位，依次排列起来。</li>
+</ol>
+<p>例如把 (173)10 转换为二进制数。</p>
+<p><img src="https://ximendatie.github.io//post-images/1564730417149.png" alt=""></p>
+<p>2．十进制小数转换为二进制小数<br>
+十进制小数转换成二进制小数采用&quot;乘2取整，顺序排列&quot;法。具体做法是：用2乘十进制小数，可以得到积，将积的整数部分取出，再用2乘余下的小数 部分，又得到一个积，再将积的整数部分取出，如此进行，直到积中的小数部分为零，或者达到所要求的精度为止。</p>
+<p>然后把取出的整数部分按顺序排列起来，先取的整数作为二进制小数的高位有效位，后取的整数作为低位有效位。</p>
+<p>例如把（0.8125）转换为二进制小数。</p>
+<p><img src="https://ximendatie.github.io//post-images/1564730429113.png" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[搞清楚JavaScript概念发展]]></title>
+        <id>https://ximendatie.github.io//post/fa-zhan-shi</id>
+        <link href="https://ximendatie.github.io//post/fa-zhan-shi">
+        </link>
+        <updated>2019-07-19T07:38:10.000Z</updated>
+        <summary type="html"><![CDATA[<p>一张图和几个问题，通俗讲JavaScript</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一张图和几个问题，通俗讲JavaScript</p>
+<!-- more -->
+<p><img src="https://ximendatie.github.io//post-images/1563521992786.png" alt=""></p>
+<h3 id="什么是javascript">什么是JavaScript?</h3>
+<p>JavaScript 是一种语言，JavaScript的标准是 ECMAScript。</p>
+<h3 id="什么是-ecmascript">什么是 ECMAScript？</h3>
+<p>我们说的 ES5， ES6……就是指的 ECMAScript 不同标准。ECMAScript 只是一个标准，而JavaScript是对这个标准的实现。</p>
+<h3 id="为啥不继续叫-javascript">为啥不继续叫 JavaScript？</h3>
+<p>因为 Oracle 拥有 Java 和 JavaScript 的商标权</p>
+<h3 id="什么是nodejs">什么是NodeJS？</h3>
+<p>NodeJS 是基于Chrome V8引擎的 JavaScript 运行环境。NodeJS使用事件驱动，非阻塞型I/O。NodeJS的包管理生态是 NPM，是现在世界上最大的开源程序包库。<br>
+NodeJS之前，JavaScript运行环境是浏览器，也就是JavaScript在网页中才能跑起来。NodeJS之后JavaScript又多了一个运行环境，就是NodeJS。</p>
+<h3 id="一般nodejs被用在哪里">一般NodeJS被用在哪里？</h3>
+<p>目前NodeJS大多被用于前端开发的开发环境。以Webpack作为例子，webpack是一个运行在 NodeJS 端的打包工具，它帮你把你写的 a.js, b.js, c.js ... 打包成一个 bundle.js。而这种打包的第一步是读取（文件读取能力）你的a.js, b.js, c.js ...，所以只能在 NodeJS 环境下做。</p>
+<p>参考：https://www.zhihu.com/question/279322623/answer/406073443</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[git 指令]]></title>
         <id>https://ximendatie.github.io//post/chang-yong-zhi-ling</id>
@@ -20,31 +94,31 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>git等常用指令</p>
 <!-- more -->
-<p>新建分支并切换到该分支
+<p>新建分支并切换到该分支<br>
 git checkout -b test</p>
-<p>删除本地分支
+<p>删除本地分支<br>
 git branch -d dev</p>
-<p>删除远程分支
-git branch -r -d origin/branch_dev
-and
+<p>删除远程分支<br>
+git branch -r -d origin/branch_dev<br>
+and<br>
 git push origin :branch_dev</p>
-<p>本地新分支同步到远程
-git push origin branch_dev:branch_dev
+<p>本地新分支同步到远程<br>
+git push origin branch_dev:branch_dev<br>
 冒号前是本地分支的名，冒号后面是要创建的远程分支名，自己另起名称随便，如果直接使用 git push origin branch_dev 则默认和远程分支同名</p>
-<p>远程新分支拉到本地
-1.git checkout -b test origin/test
-如果失败，尝试先git fetch后执行
-采用此种方法建立的本地分支会和远程分支建立映射关系
-2.git fetch origin test:test
-使用该方式会在本地新建分支，但是不会自动切换到该本地分支，需要手动checkout。
+<p>远程新分支拉到本地<br>
+1.git checkout -b test origin/test<br>
+如果失败，尝试先git fetch后执行<br>
+采用此种方法建立的本地分支会和远程分支建立映射关系<br>
+2.git fetch origin test:test<br>
+使用该方式会在本地新建分支，但是不会自动切换到该本地分支，需要手动checkout。<br>
 采用此种方法建立的本地分支不会和远程分支建立映射关系。</p>
-<p>head指向控制
-git checkout test 或
+<p>head指向控制<br>
+git checkout test 或<br>
 git checkout ea9a77f 切到某一次提交</p>
-<p>仅合并部分文件
+<p>仅合并部分文件<br>
 https://segmentfault.com/a/1190000008360855</p>
 <p>github使用的pull request和gitlab使用的merge request，意义相同</p>
-<p>回滚
+<p>回滚<br>
 git reset直接回到某一commit适用于本地回滚；git revert撤销某一commit，但是版本会向前走，可以用于远程回滚。前者指定id会定位到某个id，后者指定id会把某个id的提交撤销</p>
 ]]></content>
     </entry>
