@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>PWA开发入门 | Harvey</title>
+<title>ES6 箭头函数与普通函数的区别 | Harvey</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -111,21 +111,34 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">PWA开发入门</h2>
-            <div class="post-date">2019-06-18</div>
+            <h2 class="post-title">ES6 箭头函数与普通函数的区别</h2>
+            <div class="post-date">2019-08-06</div>
             
             <div class="post-content">
-              <p>pwa的开发相对于普通页面有两个重要点：页面缓存和app安装<br>
-页面缓存可以通过sevice worker控制，app安装可以用manifest进行配置</p>
-<!-- more -->
-<p>sw生命周期：<br>
-<img src="https://ximendatie.github.io//post-images/1560849141838.png" alt=""></p>
-<p><a href="https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&amp;mid=2247485643&amp;idx=1&amp;sn=def301d392c45679bee3317f2c1bf0ad&amp;source=41#wechat_redirect">百度搜索对PWA的探索和初步实践</a><br>
-<a href="http://zhenhua-lee.github.io/http/service-worker.html"> Service worker介绍</a><br>
-<a href="https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&amp;mid=2247485646&amp;idx=1&amp;sn=c9b73bcf34c6d275efd1627f93d9a7d6&amp;source=41#wechat_redirect">PWA 实践：从一个简单的页面开始</a></p>
+              <!-- more -->
+<blockquote>
+<p>箭头函数没有自己的this，它会捕获自己在定义时（注意，是定义时，不是调用时）所处的外层<strong>执行环境</strong>的this，并继承这个this值。所以，箭头函数中this的指向在它被定义的时候就已经确定了，之后永远不会改变。</p>
+</blockquote>
+<blockquote>
+<p>箭头函数不能作为构造函数使用<br>
+箭头函数没有自己的arguments<br>
+箭头函数没有原型prototype<br>
+箭头函数不能用作Generator函数，不能使用yeild关键字</p>
+</blockquote>
+<p>详见<br>
+https://juejin.im/post/5c979300e51d456f49110bf0</p>
 
             </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://ximendatie.github.io//post/js-shu-zi-xian-jing">
+                  <h3 class="post-title">
+                    JS数字陷阱
+                  </h3>
+                </a>
+              </div>
             
 
             

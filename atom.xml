@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ximendatie.github.io/</id>
     <title>Harvey</title>
-    <updated>2019-08-02T08:05:48.716Z</updated>
+    <updated>2019-08-14T08:39:32.469Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ximendatie.github.io/"/>
     <link rel="self" href="https://ximendatie.github.io//atom.xml"/>
@@ -10,6 +10,79 @@
     <logo>https://ximendatie.github.io//images/avatar.png</logo>
     <icon>https://ximendatie.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Harvey</rights>
+    <entry>
+        <title type="html"><![CDATA[钩子函数hook]]></title>
+        <id>https://ximendatie.github.io//post/gou-zi-han-shu-hook</id>
+        <link href="https://ximendatie.github.io//post/gou-zi-han-shu-hook">
+        </link>
+        <updated>2019-08-13T11:59:47.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>我们可以首先从字面上了解钩子，钩子是干什么的呢？日常生活中，我们的钩子是用来钩住某种东西的，比如，说，鱼钩是用来钓鱼的，一旦鱼咬了钩，钩子就一直钩住鱼了，任凭鱼在水里怎么游，也逃不出鱼钩的控制。同样的，Windows的钩子Hook也是用来钩东西的，比较抽象的是他是用来钩Windows事件或者消息的。最常见的就是鼠标和键盘钩子，用Hook钩子钩住鼠标、键盘，当你的鼠标、键盘有任何操作时，通过Hook就能知道他们都做了什么了，多么形象啊，把老鼠Mouse钩住了，不管你干什么，都逃不过我钩子Hook的手掌心。<br>
+技术上讲，钩子（Hook）是Windows消息处理机制的一个很重要的内容，谁叫Windows是基于消息的呢。应用程序可以通过钩子机制截获处理Window消息或是其他一些特定事件。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ES6、ES7、ES8特性对比]]></title>
+        <id>https://ximendatie.github.io//post/es6es7es8-fa-zhan</id>
+        <link href="https://ximendatie.github.io//post/es6es7es8-fa-zhan">
+        </link>
+        <updated>2019-08-09T12:29:35.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<table>
+<thead>
+<tr>
+<th>ECMAScript版本</th>
+<th>发布时间</th>
+<th>新增特性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ECMAScript 2009(ES5)</td>
+<td>2009年11月</td>
+<td>扩展了Object、Array、Function的功能等</td>
+</tr>
+<tr>
+<td>ECMAScript 2015(ES6)</td>
+<td>2015年6月</td>
+<td>类，模块化，箭头函数，函数参数默认值，模板字符串，解构函数，延展操作符，对象属性简写，Promise，let与const等</td>
+</tr>
+<tr>
+<td>ECMAScript 2016(ES7)</td>
+<td>2016年3月</td>
+<td>includes，指数操作符</td>
+</tr>
+<tr>
+<td>ECMAScript 2017(ES8)</td>
+<td>2017年6月</td>
+<td>sync/await，Object.values()，Object.entries()，String padding等</td>
+</tr>
+</tbody>
+</table>
+<p>参考<br>
+https://juejin.im/post/5b9cb3336fb9a05d290ee47e</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ES6 箭头函数与普通函数的区别]]></title>
+        <id>https://ximendatie.github.io//post/es6-jian-tou-han-shu-yu-pu-tong-han-shu-de-qu-bie</id>
+        <link href="https://ximendatie.github.io//post/es6-jian-tou-han-shu-yu-pu-tong-han-shu-de-qu-bie">
+        </link>
+        <updated>2019-08-06T09:24:22.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<blockquote>
+<p>箭头函数没有自己的this，它会捕获自己在定义时（注意，是定义时，不是调用时）所处的外层<strong>执行环境</strong>的this，并继承这个this值。所以，箭头函数中this的指向在它被定义的时候就已经确定了，之后永远不会改变。</p>
+</blockquote>
+<blockquote>
+<p>箭头函数不能作为构造函数使用<br>
+箭头函数没有自己的arguments<br>
+箭头函数没有原型prototype<br>
+箭头函数不能用作Generator函数，不能使用yeild关键字</p>
+</blockquote>
+<p>详见<br>
+https://juejin.im/post/5c979300e51d456f49110bf0</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[JS数字陷阱]]></title>
         <id>https://ximendatie.github.io//post/js-shu-zi-xian-jing</id>
@@ -94,32 +167,32 @@ NodeJS之前，JavaScript运行环境是浏览器，也就是JavaScript在网页
 ]]></summary>
         <content type="html"><![CDATA[<p>git等常用指令</p>
 <!-- more -->
-<p>新建分支并切换到该分支<br>
-git checkout -b test</p>
-<p>删除本地分支<br>
-git branch -d dev</p>
-<p>删除远程分支<br>
-git branch -r -d origin/branch_dev<br>
+<h3 id="新建分支并切换到该分支">新建分支并切换到该分支</h3>
+<p>git checkout -b test</p>
+<h3 id="删除本地分支">删除本地分支</h3>
+<p>git branch -d dev</p>
+<h3 id="删除远程分支">删除远程分支</h3>
+<p>git branch -r -d origin/branch_dev<br>
 and<br>
 git push origin :branch_dev</p>
-<p>本地新分支同步到远程<br>
-git push origin branch_dev:branch_dev<br>
+<h3 id="本地新分支同步到远程">本地新分支同步到远程</h3>
+<p>git push origin branch_dev:branch_dev<br>
 冒号前是本地分支的名，冒号后面是要创建的远程分支名，自己另起名称随便，如果直接使用 git push origin branch_dev 则默认和远程分支同名</p>
-<p>远程新分支拉到本地<br>
-1.git checkout -b test origin/test<br>
+<h3 id="远程新分支拉到本地">远程新分支拉到本地</h3>
+<p>1.git checkout -b test origin/test<br>
 如果失败，尝试先git fetch后执行<br>
 采用此种方法建立的本地分支会和远程分支建立映射关系<br>
 2.git fetch origin test:test<br>
 使用该方式会在本地新建分支，但是不会自动切换到该本地分支，需要手动checkout。<br>
 采用此种方法建立的本地分支不会和远程分支建立映射关系。</p>
-<p>head指向控制<br>
-git checkout test 或<br>
+<h3 id="head指向控制">head指向控制</h3>
+<p>git checkout test 或<br>
 git checkout ea9a77f 切到某一次提交</p>
-<p>仅合并部分文件<br>
-https://segmentfault.com/a/1190000008360855</p>
-<p>github使用的pull request和gitlab使用的merge request，意义相同</p>
-<p>回滚<br>
-git reset直接回到某一commit适用于本地回滚；git revert撤销某一commit，但是版本会向前走，可以用于远程回滚。前者指定id会定位到某个id，后者指定id会把某个id的提交撤销</p>
+<h3 id="仅合并部分文件">仅合并部分文件</h3>
+<p>https://segmentfault.com/a/1190000008360855</p>
+<h3 id="github使用的pull-request和gitlab使用的merge-request意义相同">github使用的pull request和gitlab使用的merge request，意义相同</h3>
+<h3 id="回滚">回滚</h3>
+<p>git reset直接回到某一commit适用于本地回滚；git revert撤销某一commit，但是版本会向前走，可以用于远程回滚。前者指定id会定位到某个id，后者指定id会把某个id的提交撤销</p>
 ]]></content>
     </entry>
 </feed>
