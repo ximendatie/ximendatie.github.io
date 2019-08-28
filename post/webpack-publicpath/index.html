@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>JS数字陷阱 | Harvey</title>
+<title>webpack publicPath | Harvey</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -111,61 +111,14 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">JS数字陷阱</h2>
-            <div class="post-date">2019-08-02</div>
+            <h2 class="post-title">webpack publicPath</h2>
+            <div class="post-date">2019-08-19</div>
             
             <div class="post-content">
-              <p>安全整形数字范围，浮点数陷阱</p>
-<!-- more -->
-<h3 id="js安全整数">js安全整数</h3>
-<p>js 中能够安全使用的有符号 安全 大整数（注意这里是指能够安全使用，进行算数运算的范围），并不像其他语言在 64 位环境中那样是:</p>
-<pre><code>2^63 - 1;//9223372036854775807
-</code></pre>
-<p>js中[-2^53, +2^53] 这个范围是称为 safe integers，超出这个范围的数字，就是 unsafe integers，</p>
-<pre><code>Number.MAX_SAFE_INTEGER // 9007199254740991 (Math.pow(2,53)-1)
-Number.MIN_SAFE_INTEGER // -9007199254740991
-</code></pre>
-<p>超出这个范围会无法正确使用，例如</p>
-<pre><code>console.log(123456789123456789) //123456789123456780
-</code></pre>
-<p>也就是想安全使用整数，需要保证位数在16位内<br>
-可以通过转化成字符串或者第三方库等方式解决大整数问题bignum、bigint</p>
-<h3 id="浮点数陷阱">浮点数陷阱</h3>
-<p>在js中，有个奇怪现象</p>
-<pre><code>0.1+0.2=0.30000000000000004
-</code></pre>
-<p>这是因为0.1在机器中以二进制存储是0.0001100110011001100(1100循环)也就是0.100000000000000005551115123126，因此产生了浮点误差，相应的0.2也有类似情况，小数不像整数那样都能被二进制直接有限的映射出来。<br>
-这时候0.1+0.2在机器计算是就变成了</p>
-<pre><code>0.00011001100110011001100110011001100110011001100110011010 +
-0.0011001100110011001100110011001100110011001100110011010 =
-0.0100110011001100110011001100110011001100110011001100111
-// 转成十进制正好是 0.30000000000000004
-</code></pre>
-<p>尽量避免小数运算，可以整体变成整形后处理</p>
-<h3 id="十进制转二进制方法">十进制转二进制方法</h3>
-<ol>
-<li>十进制整数转换为二进制整数<br>
-十进制整数转换为二进制整数采用&quot;除2取余，逆序排列&quot;法。具体做法是：用2去除十进制整数，可以得到一个商和余数；再用2去除商，又会得到一个商和余数，如此进行，直到商为零时为止，然后把先得到的余数作为二进制数的低位有效位，后得到的余数作为二进制数的高位有效位，依次排列起来。</li>
-</ol>
-<p>例如把 (173)10 转换为二进制数。</p>
-<p><img src="https://ximendatie.github.io//post-images/1564730417149.png" alt=""></p>
-<p>2．十进制小数转换为二进制小数<br>
-十进制小数转换成二进制小数采用&quot;乘2取整，顺序排列&quot;法。具体做法是：用2乘十进制小数，可以得到积，将积的整数部分取出，再用2乘余下的小数 部分，又得到一个积，再将积的整数部分取出，如此进行，直到积中的小数部分为零，或者达到所要求的精度为止。</p>
-<p>然后把取出的整数部分按顺序排列起来，先取的整数作为二进制小数的高位有效位，后取的整数作为低位有效位。</p>
-<p>例如把（0.8125）转换为二进制小数。</p>
-<p><img src="https://ximendatie.github.io//post-images/1564730429113.png" alt=""></p>
+              <p>https://www.qinshenxue.com/article/20170315092242.html</p>
 
             </div>
             
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://ximendatie.github.io//post/fa-zhan-shi">
-                  <h3 class="post-title">
-                    搞清楚JavaScript概念发展
-                  </h3>
-                </a>
-              </div>
             
 
             
