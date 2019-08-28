@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ximendatie.github.io/</id>
     <title>Harvey</title>
-    <updated>2019-08-28T06:53:12.562Z</updated>
+    <updated>2019-08-28T06:55:20.118Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ximendatie.github.io/"/>
     <link rel="self" href="https://ximendatie.github.io//atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://ximendatie.github.io//images/avatar.png</logo>
     <icon>https://ximendatie.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Harvey</rights>
+    <entry>
+        <title type="html"><![CDATA[制作发布npm包]]></title>
+        <id>https://ximendatie.github.io//post/zhi-zuo-fa-bu-npm-bao</id>
+        <link href="https://ximendatie.github.io//post/zhi-zuo-fa-bu-npm-bao">
+        </link>
+        <updated>2019-08-27T09:33:44.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>https://juejin.im/post/5b5c95b8e51d45191e0d1081</p>
+<p><img src="https://ximendatie.github.io//post-images/1566975181035.png" alt=""></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[钩子函数hook]]></title>
         <id>https://ximendatie.github.io//post/gou-zi-han-shu-hook</id>
