@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>git 指令 | Harvey</title>
+<title>commonJS的module.exports | Harvey</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -111,41 +111,44 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">git 指令</h2>
-            <div class="post-date">2019-07-03</div>
+            <h2 class="post-title">commonJS的module.exports</h2>
+            <div class="post-date">2019-09-20</div>
             
             <div class="post-content">
-              <p>git等常用指令</p>
-<!-- more -->
-<h3 id="新建分支并切换到该分支">新建分支并切换到该分支</h3>
-<p>git checkout -b test</p>
-<h3 id="删除本地分支">删除本地分支</h3>
-<p>git branch -d dev</p>
-<h3 id="删除远程分支">删除远程分支</h3>
-<p>git branch -r -d origin/branch_dev<br>
-and<br>
-git push origin :branch_dev</p>
-<h3 id="本地新分支同步到远程">本地新分支同步到远程</h3>
-<p>git push origin branch_dev:branch_dev<br>
-冒号前是本地分支的名，冒号后面是要创建的远程分支名，自己另起名称随便，如果直接使用 git push origin branch_dev 则默认和远程分支同名</p>
-<h3 id="远程新分支拉到本地">远程新分支拉到本地</h3>
-<p>1.git checkout -b test origin/test<br>
-如果失败，尝试先git fetch后执行<br>
-采用此种方法建立的本地分支会和远程分支建立映射关系<br>
-2.git fetch origin test:test<br>
-使用该方式会在本地新建分支，但是不会自动切换到该本地分支，需要手动checkout。<br>
-采用此种方法建立的本地分支不会和远程分支建立映射关系。</p>
-<h3 id="head指向控制">head指向控制</h3>
-<p>git checkout test 或<br>
-git checkout ea9a77f 切到某一次提交</p>
-<h3 id="仅合并部分文件">仅合并部分文件</h3>
-<p>https://segmentfault.com/a/1190000008360855</p>
-<h3 id="github使用的pull-request和gitlab使用的merge-request意义相同">github使用的pull request和gitlab使用的merge request，意义相同</h3>
-<h3 id="回滚">回滚</h3>
-<p>git reset直接回到某一commit适用于本地回滚；git revert撤销某一commit，但是版本会向前走，可以用于远程回滚。前者指定id会定位到某个id，后者指定id会把某个id的提交撤销</p>
+              <p>CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。加载某个模块，其实是加载该模块的module.exports属性。</p>
+<p>Node内部提供一个Module构建函数。所有模块都是Module的实例。</p>
+<blockquote>
+<p>module.id 模块的识别符，通常是带有绝对路径的模块文件名。<br>
+module.filename 模块的文件名，带有绝对路径。<br>
+module.loaded 返回一个布尔值，表示模块是否已经完成加载。<br>
+module.parent 返回一个对象，表示调用该模块的模块。<br>
+module.children 返回一个数组，表示该模块要用到的其他模块。<br>
+module.exports 表示模块对外输出的值。</p>
+</blockquote>
+<p>CommonJS模块的特点如下。</p>
+<blockquote>
+<p>CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。所有代码都运行在模块作用域，不会污染全局作用域。<br>
+模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存了，以后再加载，就直接读取缓存结果。要想让模块再次运行，必须清除缓存。<br>
+模块加载的顺序，按照其在代码中出现的顺序。</p>
+</blockquote>
+<p>为了方便，Node为每个模块提供一个exports变量，指向module.exports。这等同在每个模块头部，有一行这样的命令。</p>
+<pre><code>var exports = module.exports;
+</code></pre>
+<p>注意，不能直接将exports变量指向一个值，因为这样等于切断了exports与module.exports的联系。可以给exports添加属性。</p>
+<p>CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。AMD规范则是非同步加载模块，允许指定回调函数。由于Node.js主要用于服务器编程，模块文件一般都已经存在于本地硬盘，所以加载起来比较快，不用考虑非同步加载的方式，所以CommonJS规范比较适用。但是，如果是浏览器环境，要从服务器端加载模块，这时就必须采用非同步模式，因此浏览器端一般采用AMD规范。</p>
+<p>参考：https://javascript.ruanyifeng.com/nodejs/module.html</p>
 
             </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://ximendatie.github.io//post/zhi-zuo-fa-bu-npm-bao">
+                  <h3 class="post-title">
+                    制作发布npm包
+                  </h3>
+                </a>
+              </div>
             
 
             
