@@ -1,262 +1,121 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" >
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>He Wei · 开源项目与个人介绍</title>
+  <meta name="description" content="He Wei（ximendatie）的个人主页。探索 mahjong、Zeno 和 muzhipet，三个围绕 AI 智能体、专注与桌面交互的 macOS 项目。">
+  <meta name="theme-color" content="#f7f5ef">
+  <link rel="canonical" href="https://ximendatie.github.io/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="旧文 RSS" href="/atom.xml">
+  <link rel="preload" href="/assets/portfolio/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles/portfolio.css">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="He Wei · 开源项目与个人介绍">
+  <meta property="og:description" content="我做 macOS 桌面工具，关注 AI 智能体、专注和有趣的界面。">
+  <meta property="og:url" content="https://ximendatie.github.io/">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header shell">
+    <a class="wordmark" href="#top" aria-label="ximendatie 首页">ximendatie<span>.</span></a>
+    <nav aria-label="主导航">
+      <a href="#projects">项目</a>
+      <a href="#about">关于我</a>
+      <a class="with-arrow" href="https://github.com/ximendatie">GitHub <span class="arrow arrow-out" aria-hidden="true"></span></a>
+    </nav>
+  </header>
 
-<title>Harvey</title>
-<meta name="description" content="温故而知新">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://ximendatie.github.io//favicon.ico?v=1569227674836">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://ximendatie.github.io//styles/main.css">
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143163620-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-143163620-1');
-</script>
-
-
-  </head>
-  <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://ximendatie.github.io/">
-        <img src="https://ximendatie.github.io//images/avatar.png?v=1569227674836" class="site-logo">
-        <h1 class="site-title">Harvey</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
+  <main class="shell" id="main" tabindex="-1">
+    <section class="intro" aria-labelledby="intro-title">
+      <h1 id="intro-title" lang="en">He Wei<span>.</span></h1>
+      <div class="intro-copy">
+        <p class="intro-lead">我做 macOS 桌面工具，<br>让后台工作<span>一眼可见。</span></p>
+        <p class="intro-detail">从 AI 智能体的运行状态，到手边的待办，再到会跑来跑去的桌宠。我喜欢用小界面解决小问题。</p>
       </div>
-    </div>
-    <div>
-      
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-          <a class="social-link" href="https://github.com/ximendatie" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      温故而知新
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://ximendatie.github.io//atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
+    </section>
 
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <h2 id="projects-title">精选项目</h2>
+        <a class="with-arrow text-link" href="https://github.com/ximendatie?tab=repositories">查看所有仓库 <span class="arrow arrow-out" aria-hidden="true"></span></a>
+      </div>
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://ximendatie.github.io//post/commonjs-de-moduleexports">
-                  <h2 class="post-title">commonJS的module.exports</h2>
-                </a>
-                <div class="post-date">
-                  2019-09-20
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://ximendatie.github.io//post/zhi-zuo-fa-bu-npm-bao">
-                  <h2 class="post-title">制作发布npm包</h2>
-                </a>
-                <div class="post-date">
-                  2019-08-27
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://ximendatie.github.io//post/gou-zi-han-shu-hook">
-                  <h2 class="post-title">钩子函数hook</h2>
-                </a>
-                <div class="post-date">
-                  2019-08-13
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://ximendatie.github.io//post/es6es7es8-fa-zhan">
-                  <h2 class="post-title">ES6、ES7、ES8特性对比</h2>
-                </a>
-                <div class="post-date">
-                  2019-08-09
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://ximendatie.github.io//post/es6-jian-tou-han-shu-yu-pu-tong-han-shu-de-qu-bie">
-                  <h2 class="post-title">ES6 箭头函数与普通函数的区别</h2>
-                </a>
-                <div class="post-date">
-                  2019-08-06
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://ximendatie.github.io//post/js-shu-zi-xian-jing">
-                  <h2 class="post-title">JS数字陷阱</h2>
-                </a>
-                <div class="post-date">
-                  2019-08-02
-                </div>
-                <div class="post-abstract">
-                  <p>安全整形数字范围，浮点数陷阱</p>
-
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://ximendatie.github.io//post/fa-zhan-shi">
-                  <h2 class="post-title">搞清楚JavaScript概念发展</h2>
-                </a>
-                <div class="post-date">
-                  2019-07-19
-                </div>
-                <div class="post-abstract">
-                  <p>一张图和几个问题，通俗讲JavaScript</p>
-
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://ximendatie.github.io//post/chang-yong-zhi-ling">
-                  <h2 class="post-title">git 指令</h2>
-                </a>
-                <div class="post-date">
-                  2019-07-03
-                </div>
-                <div class="post-abstract">
-                  <p>git等常用指令</p>
-
-                </div>
-              </div>
-              
-            </article>
-          
-
-          <div class="pagination-container">
-  
-  
-</div>
-
+      <article class="featured" aria-labelledby="mahjong-title">
+        <div class="featured-copy">
+          <h3 class="project-name" id="mahjong-title" lang="en">mahjong</h3>
+          <p class="project-label">AI 智能体状态面板</p>
+          <p class="project-description">一枚浮在桌面上的麻将牌，让你随时知道 Codex、Claude、ChatGPT 等智能体是否正在工作。会话状态在本机读取。</p>
+          <p class="project-stack">Swift <span aria-hidden="true">·</span> macOS <span aria-hidden="true">·</span> MIT</p>
+          <div class="project-links">
+            <a class="with-arrow project-action" href="https://github.com/ximendatie/mahjong/releases/latest">下载安装 <span class="arrow arrow-out" aria-hidden="true"></span></a>
+            <a class="with-arrow text-link" href="https://github.com/ximendatie/mahjong" aria-label="查看 mahjong 源码">源码 <span class="arrow arrow-out" aria-hidden="true"></span></a>
+          </div>
         </div>
+        <figure class="project-visual mahjong-visual">
+          <img src="/assets/portfolio/mahjong.webp" width="644" height="548" alt="mahjong 项目演示中的智能体状态面板" fetchpriority="high">
+        </figure>
+      </article>
+
+      <div class="project-grid">
+        <article class="project" aria-labelledby="zeno-title">
+          <figure class="project-visual zeno-visual">
+            <img src="/assets/portfolio/zeno.webp" width="640" height="400" alt="Zeno 的陶瓷球挂件，事项沿球体边缘排列" loading="lazy" decoding="async">
+          </figure>
+          <div class="project-heading">
+            <div>
+              <h3 class="project-name" id="zeno-title" lang="en">Zeno</h3>
+              <p class="project-label">专注与待办挂件</p>
+            </div>
+            <p class="project-stack">Swift <span aria-hidden="true">·</span> macOS</p>
+          </div>
+          <p class="project-description">一颗贴在屏幕边缘的陶瓷球。把鼠标移到球边的短线就能看到待办，点一下即可标记完成。事项保存在本机。</p>
+          <a class="with-arrow text-link" href="https://github.com/ximendatie/Zeno" aria-label="查看 Zeno 源码">查看源码 <span class="arrow arrow-out" aria-hidden="true"></span></a>
+        </article>
+
+        <article class="project" aria-labelledby="muzhipet-title">
+          <figure class="project-visual muzhipet-visual">
+            <img src="/assets/portfolio/muzhipet.webp" width="331" height="650" alt="牧之桌宠，一只黑白相间的边牧" loading="lazy" decoding="async">
+          </figure>
+          <div class="project-heading">
+            <div>
+              <h3 class="project-name" id="muzhipet-title" lang="en">muzhipet</h3>
+              <p class="project-label">牧之桌宠</p>
+            </div>
+            <p class="project-stack">Electron <span aria-hidden="true">·</span> macOS</p>
+          </div>
+          <p class="project-description">一只会在桌面上走路和奔跑的小狗。可以拖动、缩放，点一下还会冒出中文对白。</p>
+          <a class="with-arrow text-link" href="https://github.com/ximendatie/muzhipet" aria-label="查看 muzhipet 源码">查看源码 <span class="arrow arrow-out" aria-hidden="true"></span></a>
+        </article>
       </div>
-    </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <article class="more-project" aria-labelledby="tab-manager-title">
+        <div>
+          <h3 id="tab-manager-title" lang="en">Tab Manager</h3>
+          <p>跨窗口整理 Chrome 和 Ego Lite 标签页，支持拖拽框选、批量关闭和保留固定标签页。</p>
+        </div>
+        <div class="project-links">
+          <a class="with-arrow text-link" href="https://ximendatie.github.io/tab-manager/">项目主页 <span class="arrow arrow-out" aria-hidden="true"></span></a>
+          <a class="with-arrow text-link" href="https://github.com/ximendatie/tab-manager" aria-label="查看 Tab Manager 源码">源码 <span class="arrow arrow-out" aria-hidden="true"></span></a>
+        </div>
+      </article>
+    </section>
 
-<script type="application/javascript">
+    <section class="about" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">关于我</h2>
+      <div class="about-copy">
+        <p>我是 He Wei，在 GitHub 上用 <span lang="en">@ximendatie</span>。我在探索怎么用更少的界面看清手头的事，比如几个终端里的智能体各自在做什么，或者今天还有哪件小事要办。</p>
+        <p>做这些工具时，我倾向于把数据留在本机、把状态放到手边，也愿意在交互里留一点趣味。</p>
+        <a class="with-arrow text-link" href="https://github.com/ximendatie">在 GitHub 找到我 <span class="arrow arrow-out" aria-hidden="true"></span></a>
+      </div>
+    </section>
+  </main>
 
-AOS.init();
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
-</script>
-
-
-
-
-  </body>
+  <footer class="site-footer shell">
+    <a class="footer-home" href="#top" lang="en">He Wei</a>
+    <a class="with-arrow text-link" href="/archives/">旧文归档 <span class="arrow arrow-out" aria-hidden="true"></span></a>
+  </footer>
+</body>
 </html>
